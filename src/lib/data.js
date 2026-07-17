@@ -39,6 +39,46 @@ export const techStack = [
   "DSA",
   "OOP",
 ];
+export const skillCategories = [
+  {
+    label: "Languages",
+    icon: "code",
+    items: ["Java", "JavaScript", "HTML5", "CSS3"],
+  },
+  {
+    label: "Frontend",
+    icon: "web",
+    items: ["React.js", "Tailwind CSS", "Bootstrap"],
+  },
+  {
+    label: "Backend",
+    icon: "backend",
+    items: ["Node.js", "Express.js", "REST APIs"],
+  },
+  {
+    label: "Database",
+    icon: "db",
+    items: ["MongoDB"],
+  },
+  {
+    label: "Core CS",
+    icon: "cpu",
+    items: ["DSA", "OOP", "DBMS", "OS", "CN"],
+  },
+  {
+    label: "Tools",
+    icon: "tools",
+    items: ["Git", "GitHub", "VS Code", "Axios", "ImageKit", "Vercel", "Render"],
+  },
+];
+
+export const aboutStats = [
+  { label: "Current status", value: "Seeking internships" },
+  { label: "Degree", value: "B.Tech, Information Technology" },
+  { label: "Year", value: "Final year (2023–2027)" },
+  { label: "CGPA", value: "7.1 / 10" },
+  { label: "Location", value: "Jabalpur, India" },
+];
 
 export const projects = [
   {

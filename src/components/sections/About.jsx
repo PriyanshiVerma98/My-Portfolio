@@ -1,4 +1,6 @@
-import { site, timeline, certifications } from "@/lib/data";
+
+
+import { site, timeline, certifications, aboutStats } from "@/lib/data";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
@@ -37,23 +39,43 @@ export default function About() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.2}>
-            <ol className="space-y-8 border-l border-line pl-6">
-              {timeline.map((item) => (
-                <li key={item.hash} className="relative">
-                  <span className="absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full border border-signal bg-bg" />
-                  <p className="font-mono text-xs text-muted">
-                    <span className="text-signal"></span> · {item.date}
-                  </p>
-                  <p className="mt-1 font-display text-lg font-semibold">
-                    {item.title}
-                  </p>
-                  <p className="text-sm text-muted">{item.place}</p>
-                  <p className="mt-1 text-sm text-muted">{item.detail}</p>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
+          <div>
+            <Reveal delay={0.15} className="rounded-2xl border border-line bg-surface/60 p-6">
+              <dl className="divide-y divide-line">
+                {aboutStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0"
+                  >
+                    <dt className="font-mono text-xs uppercase tracking-wider text-muted">
+                      {stat.label}
+                    </dt>
+                    <dd className="text-right font-display text-sm font-semibold">
+                      {stat.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
+
+            <Reveal delay={0.25}>
+              <ol className="mt-10 space-y-8 border-l border-line pl-6">
+                {timeline.map((item) => (
+                  <li key={item.hash} className="relative">
+                    <span className="absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full border border-signal bg-bg" />
+                    <p className="font-mono text-xs text-muted">
+                      <span className="text-signal">{item.hash}</span> · {item.date}
+                    </p>
+                    <p className="mt-1 font-display text-lg font-semibold">
+                      {item.title}
+                    </p>
+                    <p className="text-sm text-muted">{item.place}</p>
+                    <p className="mt-1 text-sm text-muted">{item.detail}</p>
+                  </li>
+                ))}
+              </ol>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
