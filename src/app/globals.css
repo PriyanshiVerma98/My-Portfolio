@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   DESIGN TOKENS
+   Palette: "amber terminal" — an ink-green-black base (not pure
+   black, not GitHub's blue-black) with a warm brass/amber signal
+   color, evoking phosphor CRT terminals rather than a generic
+   dark-mode + neon-accent template.
+------------------------------------------------------------------ */
+:root {
+  --color-ink: #0b0f0e;        /* base background, dark mode */
+  --color-paper: #f6f5f1;      /* base background, light mode */
+  --color-signal: #d8a34e;     /* primary accent — brass / amber */
+  --color-signal-dim: #a97f3d; /* pressed / muted accent */
+  --color-moss: #45564c;       /* secondary tone — deep green-gray */
+  --color-moss-soft: #182019;  /* card surfaces, dark mode */
+  --color-ash: #9aa39b;        /* muted body text, dark mode */
+  --color-line: #1d2420;       /* hairline borders, dark mode */
+
+  --color-ink-light: #1c1c1a;      /* body text, light mode */
+  --color-ash-light: #5c6660;      /* muted text, light mode */
+  --color-line-light: #e3e0d6;     /* hairline borders, light mode */
+  --color-surface-light: #eeece3;  /* card surfaces, light mode */
+
+  --bg: var(--color-paper);
+  --fg: var(--color-ink-light);
+  --muted: var(--color-ash-light);
+  --surface: var(--color-surface-light);
+  --line: var(--color-line-light);
+}
+
+.dark {
+  --bg: var(--color-ink);
+  --fg: #f2f1ec;
+  --muted: var(--color-ash);
+  --surface: var(--color-moss-soft);
+  --line: var(--color-line);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-signal: var(--color-signal);
+  --color-signal-dim: var(--color-signal-dim);
+  --color-moss: var(--color-moss);
+  --color-ash: var(--color-ash);
+  --color-ink: var(--color-ink);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-manrope);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(1.25rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: auto; /* Lenis takes over smooth scrolling */
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-ink);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--color-moss);
+  border-radius: 999px;
+}
+
+/* Visible keyboard focus everywhere — accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
