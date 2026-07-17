@@ -2,7 +2,7 @@
 
 A modern and responsive portfolio website showcasing my projects, technical skills, achievements, and journey as a Full Stack MERN Developer.
 
-## 🚀 Live Demo
+
 
 ## 🚀 Live Demo
 
