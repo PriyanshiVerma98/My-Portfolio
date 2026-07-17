@@ -4,7 +4,9 @@ A modern and responsive portfolio website showcasing my projects, technical skil
 
 ## 🚀 Live Demo
 
-**Portfolio:** *(Add your deployed portfolio link here)*
+## 🚀 Live Demo
+
+**Portfolio:** https://my-portfolio-zeta-liard-88.vercel.app/
 
 ## ✨ Features
 
@@ -38,7 +40,7 @@ src/
 ##  Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/PriyanshiVerma98/My-Portfolio.git
 cd portfolio
 npm install
 npm run dev
