@@ -105,29 +105,47 @@ export const projects = [
     repoUrl: "https://github.com/PriyanshiVerma98/Code-Reviewer.git",
     featured: true,
   },
-  {
-    slug: "mini-social-post-app",
-    hash: "7bd4e10",
-    name: "Mini Social Media post App",
-    year: "2025",
-    role: "Full-stack developer (solo)",
-    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "ImageKit"],
-    oneLiner:
-      "A full-stack social app with complete CRUD flows, image uploads, and a responsive React UI.",
-    problem:
-      "Wanted a project that forced full ownership of the whole stack: schema design, auth-adjacent data flows, media handling, and a UI that holds up on any screen size.",
-    approach:
-      "Designed MongoDB collections for posts and users, built REST endpoints for full CRUD, and integrated ImageKit for image upload and delivery instead of storing binary data directly in the database.",
-    decisions: [
-      "Used ImageKit rather than local file storage so media is served from a CDN and the app stays fast as content grows.",
-      "Structured the React components to be reusable across the feed, single-post, and profile views instead of duplicating markup.",
-    ],
-    outcome:
-      "A complete, responsive CRUD application covering the core mechanics behind most modern social products.",
-    liveUrl: "https://your-project-link.vercel.app",
-    repoUrl: "https://github.com/your-username/mini-social-media-app",
-    featured: true,
-  },
+ {
+  slug: "mini-post-maker",
+  hash: "7bd4e10",
+  name: "Mini Post Maker",
+  year: "2026",
+  role: "Full Stack Developer (Solo)",
+  stack: [
+    "React.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Axios",
+    "ImageKit"
+  ],
+  oneLiner:
+    "A modern full-stack social media application inspired by Instagram, featuring cloud-based image uploads, dynamic feeds, and a responsive user experience.",
+
+  problem:
+    "I wanted to understand how modern social media platforms handle post creation, cloud image storage, and dynamic content rendering by building the complete posting workflow from scratch.",
+
+  approach:
+    "Built a complete MERN application where users can upload images with captions, preview posts before publishing, store media securely using ImageKit, save optimized image URLs in MongoDB, and instantly view posts in a responsive feed powered by REST APIs.",
+
+  decisions: [
+    "Integrated ImageKit instead of local storage so images are delivered through a global CDN while keeping the database lightweight by storing only image URLs.",
+    "Designed reusable React components with Tailwind CSS to create a modern glassmorphism-inspired interface that remains responsive across desktop and mobile devices.",
+    "Implemented live image preview before upload to provide a smoother and more interactive user experience.",
+    "Separated frontend and backend into independent applications, communicating through REST APIs using Axios for a scalable architecture."
+  ],
+
+  outcome:
+    "Successfully developed a production-style full-stack application that demonstrates cloud media handling, RESTful API development, MongoDB integration, responsive UI design, and the complete post creation-to-feed workflow found in modern social media platforms.",
+
+  liveUrl: "https://github.com/PriyanshiVerma98/Mini-Post-Maker",
+
+  repoUrl: "https://github.com/PriyanshiVerma98/Mini-Post-Maker",
+
+  featured: true,
+},
   {
     slug: "tradeverse",
     hash: "3c88f01",
