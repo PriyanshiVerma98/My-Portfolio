@@ -106,7 +106,7 @@ export const projects = [
     featured: true,
   },
  {
-  slug: "mini-post-maker",
+  slug: "Mini-Post-Maker",
   hash: "7bd4e10",
   name: "Mini Post Maker",
   year: "2026",
