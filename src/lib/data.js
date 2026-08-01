@@ -181,8 +181,8 @@ export const projects = [
     outcome:
       "Delivered a production-ready virtual trading platform that simulates a realistic stock trading experience with secure authentication, live market updates, transaction-safe trading, portfolio analytics, leaderboards, and an integrated learning hub. Showcases expertise in full-stack MERN development, REST APIs, WebSockets, and scalable application design.",
 
-    liveUrl: "https://your-project-link.vercel.app",
-    repoUrl: "https://github.com/your-username/tradeverse",
+    liveUrl: "https://github.com/PriyanshiVerma98/TRADEVERSE_virtual_trading.git",
+    repoUrl: "https://github.com/PriyanshiVerma98/TRADEVERSE_virtual_trading.git",
     featured: true,
   },
 ];
