@@ -151,19 +151,36 @@ export const projects = [
     hash: "3c88f01",
     name: "TradeVerse",
     year: "2024",
-    role: "Frontend developer (solo)",
-    stack: ["React.js", "Tailwind CSS"],
+    role: "Full Stack developer",
+    stack: ["React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Socket.io",
+    "JWT",
+    "bcryptjs",
+    "Recharts",
+    "Axios",
+    "Tailwind CSS",],
     oneLiner:
-      "A responsive virtual trading platform, built while exploring AI-assisted development workflows.",
+     "A full-stack virtual stock trading platform where users get ₹1,00,000 in virtual money to buy and sell real NSE stocks — with live prices, portfolio tracking, and a built-in learning hub.",
     problem:
-      "Wanted to simulate the core experience of a trading platform — watchlists, trade actions, and a data-dense UI — while also learning how to use AI tools like ChatGPT and Claude as real development collaborators rather than search engines.",
+        "New investors in India are afraid to enter the stock market because of the risk of losing real money. There was no platform that felt like a real trading experience — with live prices, watchlists, and portfolio tracking — while being completely risk-free. I built TradeVerse to bridge that gap: a platform that looks, feels, and behaves like a real trading app, but uses virtual money so beginners can learn by actually doing.",
     approach:
-      "Built the interface in React with Tailwind for a fast, responsive layout, using AI tools to pressure-test component structure and speed up iteration on UI states.",
+       "Built a complete MERN stack application with a React frontend and an Express + MongoDB backend. Implemented JWT-based authentication so each user gets their own ₹1,00,000 virtual balance. Used Socket.io to stream simulated live price updates to the frontend every 5 seconds. Designed the buy/sell engine with MongoDB atomic transactions to ensure balance and holdings are always consistent. Added a Learning Hub with 6 educational articles to guide complete beginners through stock market concepts.",
     decisions: [
-      "Treated AI tools as a pair programmer for scaffolding and debugging, while owning the component architecture and final implementation decisions.",
-    ],
+  "Ensured data consistency using MongoDB transactions for buy/sell operations.",
+  "Built real-time stock updates with Socket.io instead of HTTP polling.",
+  "Implemented JWT authentication with Axios interceptors for seamless API requests.",
+  "Managed global state using React Context API.",
+  "Used weighted average pricing for accurate portfolio P&L calculations.",
+  "Seeded realistic NSE stock data with historical prices and market metrics."
+],
+
     outcome:
-      "A working, responsive front end that reflects both UI craft and a practical, honest approach to AI-assisted development.",
+      "Delivered a production-ready virtual trading platform that simulates a realistic stock trading experience with secure authentication, live market updates, transaction-safe trading, portfolio analytics, leaderboards, and an integrated learning hub. Showcases expertise in full-stack MERN development, REST APIs, WebSockets, and scalable application design.",
+
     liveUrl: "https://your-project-link.vercel.app",
     repoUrl: "https://github.com/your-username/tradeverse",
     featured: true,
@@ -172,7 +189,7 @@ export const projects = [
 
 export const achievements = [
   {
-    stat: "100+",
+    stat: "200+",
     label: "DSA problems solved",
     detail: "Across GeeksforGeeks and LeetCode",
   },
@@ -194,7 +211,7 @@ export const timeline = [
     date: "2023 — 2027",
     title: "B.Tech, Information Technology",
     place: "Jabalpur Engineering College",
-    detail: "CGPA 7.1/10 · No active backlogs",
+    detail: "CGPA 7.3/10 · No active backlogs",
   },
   {
     hash: "f4a71c0",
@@ -205,7 +222,7 @@ export const timeline = [
   },
   {
     hash: "e91b6a3",
-    date: "Ongoing",
+    date: "Completed",
     title: "160 Days DSA Challenge",
     place: "GeeksforGeeks",
     detail: "Certification for sustained, structured problem solving.",
